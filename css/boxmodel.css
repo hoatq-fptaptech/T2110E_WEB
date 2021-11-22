@@ -1,0 +1,65 @@
+*{
+
+}
+body{
+    background-color: #f2f2f2;
+    color:#242424;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Roboto",sans-serif;
+    background-image: url("../images/Desktop-Wallpaper-4.jpg");
+    background-size: cover;
+}
+.item{
+    width: 350px;
+    height: 350px;
+    border: 1px solid darkred;/* size type color: type: solid dotted dashed */
+    float:left;
+    margin: 10px;
+    /*
+     margin-top:10px;
+     margin-right:10px;
+     margin-bottom:10px;
+     margin-left:10px;
+     */
+    padding: 15px;
+    box-sizing: border-box;/* làm kích thước khối tính từ border trờ vào */
+    overflow: hidden;
+    box-shadow: 0px 0px 10px red;
+    border-radius: 5px;
+}
+#special{
+    background-color: #EEE8AA;
+}
+#special p{ /* tác động đến những phần tử p nằm trong khu vực của id special */
+
+}
+
+/*
+    Nguyên lý ưu tiên
+    thẻ < cha thẻ < .class < cha .class < #id < cha #id
+    -> nếu cùng cấp thì cấp độ của cha cao hơn và rõ ràng hơn thì ưu tiên cao hơn
+    -> nếu đối tượng y hệt nhau -> ưu tiên cái viết sau
+ */
+.item #pt-gold{ /* LV 6 */
+    color:yellow;
+}
+#pt-gold{ /* LV 5 */
+    color: orangered;
+}
+.item .pt{ /* LV 4 */
+    color: goldenrod;
+}
+.pt{ /* LV 3 */
+    color:pink;
+}
+div p{ /* LV 2 */
+    color:blue;
+}
+p{ /* LV 0 */
+    color: green ;
+}
+p{ /* LV 1 */
+    color:red;
+}
