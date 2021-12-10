@@ -8,7 +8,7 @@
     <h1 id="tit" class="x1 x2">Chính sách an sinh của TP HCM còn bị động</h1>
     <p id="para">Dịch diễn biến phức tạp khiến thành phố chưa chuẩn
         bị kỹ kịch bản an sinh xã hội, nên quá trình thực hiện gặp nhiều hạn chế, bị động, theo Chủ tịch UBND thành phố.</p>
-    <h2 id="countdown">10</h2>
+    <h2 class="x1" id="countdown">10</h2>
     <h2><span id="minute">00</span>:<span id="second">00</span></h2>
     <h2><span id="c-h">00</span>:<span id="c-m">00</span>:<span id="c-s">00</span></h2>
     <script type="text/javascript">
@@ -94,7 +94,22 @@
         // document.getElementsByTagName
         //document.querySelectorAll()
 
+        var hh2 = document.getElementsByTagName("h2"); // array (collection) các đối tượng
+        for(var i=0;i<hh2.length;i++){
+            hh2[i].style.color = "red";
+        }
+
+        var x1s = document.getElementsByClassName("x1");// array(collection) các object
+        for(var i=0;i<x1s.length;i++){
+            x1s[i].style.backgroundColor = "green";
+        }
+
+        var x2ss = document.querySelectorAll("h1.x2");// collection các object //gọi ra giống gọi trong css
+        for(var i=0;i<x2ss.length;i++){
+            x2ss[i].style.fontSize = "40px";
+        }
         // Events js
+
     </script>
 </body>
 </html>
